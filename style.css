@@ -1,0 +1,746 @@
+.sony {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 35px;
+  background-color: #000;
+}
+
+.sony-logo {
+  height: 13px;
+  margin-right: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 65px;
+  padding: 0 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav__left,
+.nav__right {
+  display: flex;
+  align-items: center;
+}
+
+.nav__pslogo {
+  height: 55px;
+  margin-right: 10px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-right: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.nav__search-icon {
+  height: 1.4rem;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.nav__btn {
+  background-color: #0070cc;
+  margin-right: 15px;
+  color: #fff;
+}
+
+.nav__btn:hover {
+  background-color: #005499;
+  cursor: pointer;
+}
+
+.nav__link {
+  color: #fff;
+}
+
+.nav__link,
+a:hover {
+  color: #0070cc;
+}
+
+.nav__link,
+a:active {
+  color: #0070cc;
+}
+
+/* Responsive image container */
+.main__game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  width: 100%;
+  height: auto;
+  background-color: #1f1f1f;
+  box-sizing: border-box;
+}
+
+.main__game-img {
+  margin: 0;
+  min-width: 100%; /* Ensure the image does not shrink below the container's width */
+  max-width: 100%; /* Ensure the image does not exceed the container's width */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: contain;
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards 0.6s; /* Duration, timing function, and forward fill mode */
+}
+
+.fc25-logo {
+  position: absolute;
+  left: 60px;
+  top: 155px;
+  height: 100px;
+  animation: fade-up 1s ease-in-out forwards 0.6s;
+  opacity: 0;
+}
+
+.main-game__about {
+  color: #fff;
+  position: absolute;
+  top: 230px;
+  left: 60px;
+  font-size: 3.8rem;
+  font-weight: 300;
+  animation: fade-up 1s ease-in-out forwards 0.6s;
+  opacity: 0;
+}
+
+.main-game__description {
+  color: #fff;
+  position: absolute;
+  left: 60px;
+  font-size: 1.1rem;
+  max-width: 57ch;
+  font-weight: 400;
+  top: 350px;
+  animation: fade-up 1s ease-in-out forwards 0.6s;
+  opacity: 0;
+}
+
+.main-game__price {
+  color: #fff;
+  position: absolute;
+  left: 60px;
+  font-size: 1.4rem;
+  max-width: 57ch;
+  font-weight: 300;
+  top: 420px;
+  animation: fade-up 1s ease-in-out forwards 0.6s;
+  opacity: 0;
+}
+
+.main-game__btn {
+  color: #000;
+  background-color: #fff;
+  position: absolute;
+  left: 70px;
+  font-size: 1.3rem;
+  max-width: 57ch;
+  font-weight: 600;
+  top: 480px;
+  cursor: pointer;
+  transition: 0.03s;
+  animation: fade-up 1s ease-in-out forwards 0.6s;
+  opacity: 0;
+}
+
+.main-game__btn:hover {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.game__game {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 100px;
+  margin-left: 100px;
+  height: 150px;
+  align-items: center;
+  transition: 1s;
+}
+
+.game__banner {
+  border-radius: 10px;
+  height: 85px;
+  margin-left: 10px;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.game__banner:focus {
+  outline: solid #0070cc;
+  outline-offset: 2px;
+}
+
+.game__banner:last-child {
+  margin-right: 10px;
+}
+
+.game__banner:hover {
+  transform: translateY(-5px);
+  -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
+}
+
+.console {
+  margin: 60px 50px 10px 50px;
+}
+
+.console__title {
+  float: left;
+  font-weight: 200;
+  max-width: 15ch;
+  font-size: 3.7rem;
+}
+
+.console__img {
+  float: right;
+  height: 500px;
+}
+
+.console__about {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+}
+
+.console__name {
+  color: #0070cc;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.console__description {
+  color: #8c8c8c;
+  margin-top: 5px;
+}
+
+.console__btn {
+  margin-right: auto;
+  background-color: #0070cc;
+  color: #fff;
+  padding: 0.7em 1rem;
+  transition: 0.2s ease-in;
+}
+
+.console__btn:hover {
+  background-color: #005499;
+  outline: 3px solid #0070cc;
+  outline-offset: 2px;
+}
+
+.stuff {
+  display: flex;
+  justify-content: space-around;
+  clear: both;
+  height: 200px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.stuff__product {
+  width: 270px;
+  height: 200px;
+  cursor: pointer;
+  transition: 0.1s ease-in;
+}
+
+.stuff__product img {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
+  transition: 0.1s ease-in;
+}
+
+.stuff__product:hover img {
+  -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.07);
+  transform: scale(1.01);
+}
+
+.product {
+  height: 150px;
+}
+
+.product__name {
+  font-weight: 400;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
+
+.PS4-PS5 {
+  text-align: center;
+  height: 850px;
+  background-color: #1f1f1f;
+  padding-top: 10px;
+}
+
+.PS4-PS5__title {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+.PS4-PS5__buttons {
+  padding: 12px;
+  background-color: #121314;
+  border-radius: 100px;
+  transition: 0.2s;
+  position: sticky;
+  top: 70px;
+  z-index: 1;
+}
+
+.PS4-PS5__buttons:hover {
+  -webkit-box-shadow: 0 0 10px 2px rgba(0, 5, 5, 0.6);
+  -moz-box-shadow: 0 0 10px 2px rgba(0, 5, 5, 0.6);
+  box-shadow: 0 0 10px 2px rgba(0, 5, 5, 0.6);
+}
+
+.PS4-PS5__btn {
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #121314;
+  transition: 0.3s;
+}
+
+.PS4-PS5__btn:focus {
+  color: #000;
+  background-color: #fff;
+}
+
+.PS4-PS5__btn:hover {
+  color: #0070cc;
+}
+
+.collections {
+  margin-top: 70px;
+  margin-left: 70px;
+  margin-right: 70px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 50px 10px;
+}
+
+.game2 {
+  height: 200px;
+  width: 200px;
+  text-align: left;
+  border-radius: 7px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.game2 img {
+  transition: 0.3s;
+}
+
+.game2:hover img {
+  transform: scale(1.02);
+  -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.7);
+}
+
+.game2__game {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.game2__title {
+  text-transform: capitalize;
+  margin-top: 2px;
+  color: #fff;
+  font-weight: 400;
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ps-plus {
+  padding-top: 110px;
+  height: 900px;
+  width: auto;
+  text-align: center;
+  background-image: url(./images/ps-plus/play-play-play-ps-plus-background-desktop-01-ja-jp-03jul23.webp);
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ps-plus img {
+  height: 50px;
+  filter: brightness(1.1);
+}
+
+.ps-plus__title {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+.ps-plus__description {
+  color: #6b6b6b;
+}
+
+.ps-plus__plan {
+  display: flex;
+  position: relative;
+}
+
+.ps-plus__essential {
+  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  height: 400px; /* Reduced height */
+  width: 1100px; /* Reduced width */
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to top right,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0) 90%
+    ),
+    url(./images/ps-plus/ps-plus-essential-image-block-desktop-01-en-06aug24.webp);
+  margin-top: 50px;
+  background-size: cover; /* Scale the background image to cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.ps-plus__essential:hover {
+  -webkit-box-shadow: 0 0 10px 9px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 10px 9px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 9px rgba(0, 0, 0, 0.2);
+}
+
+.ps-plus__essential-content {
+  position: absolute;
+  bottom: 10px;
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.ps-plus__essential-content img {
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.ps-plus__title1 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.ps-plus__description1 {
+  margin-top: 0;
+  max-width: 50ch;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.ps-plus__btn {
+  background: #0070cc;
+  margin-top: 50px;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.2s;
+}
+
+.ps-plus__btn:hover {
+  background-color: #005499;
+  outline: 3px solid #0070cc;
+  outline-offset: 3px;
+}
+
+.ps-latest {
+  background-image: url(./images/headsets/psvr2-register-homepage-hero-desktop-01-en-14nov22.webp);
+  height: 560px;
+  background-size: cover; /* Scale the background image to cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+  color: #fff;
+}
+
+.ps__latest {
+  margin-top: 0;
+  position: absolute;
+  left: 100px;
+  top: 150px;
+  transition: 0.1s;
+}
+
+.ps__latest-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.ps__latest-description {
+  max-width: 57ch;
+  font-size: 1.1rem;
+}
+
+.ps__latest-btn {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+  font-size: 1.2rem;
+}
+
+.ps-latest-btn2 {
+  margin-left: 10px;
+  background-color: #d63d00;
+  color: #fff;
+}
+
+.ps-latest-btn1:hover {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.ps-latest-btn2:hover {
+  outline: 3px solid #d63d00;
+  background: #aa2f00;
+  outline-offset: 3px;
+}
+
+.ps-latest2 {
+  position: relative;
+}
+
+.ps__latest2 {
+  position: absolute;
+  left: 100px;
+  top: 150px;
+}
+
+.ps__latest-title2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.ps__latest-description2 {
+  max-width: 57ch;
+  font-size: 1.1rem;
+}
+
+.ps-latest2 {
+  background-image: url(./images/games/this-month-on-playstation-jul-homepage-background-desktop-01-en-23jan24.webp);
+  height: 560px;
+  background-size: cover; /* Scale the background image to cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  position: relative;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.latest {
+  height: 100vh;
+  color: #fff;
+  background-color: #26254f;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center the items horizontally */
+  justify-content: center; /* Center the items vertically */
+  padding: 20px;
+}
+
+.games-container {
+  display: flex; /* Arrange .game1 divs in a row */
+  justify-content: space-around; /* Add space around the .game1 divs */
+  width: 100%;
+  max-width: 1800px; /* Ensure the container has a max width */
+  margin-bottom: 20px; /* Add space between the game divs and the button */
+}
+
+.game1 {
+  margin: 10px;
+  height: 400px;
+  width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.game1:hover {
+  transform: translateY(-20px);
+  background-color: #1f1f1f;
+  outline: 1px solid #fff;
+  outline-offset: 5px;
+}
+
+.game-img1 {
+  height: 250px;
+  background-image: url(./images/games/concord-screenshot-05-en-24may24.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.game-img2 {
+  height: 250px;
+  background-image: url(./images/games/cat-quest-3-screenshot-05-en-21may24.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.game-img3 {
+  height: 250px;
+  background-image: url(./images/games/the-first-descendant-keyart-01-en-02jan24.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.latest__title {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.latest__description {
+  font-size: 0.9rem;
+}
+
+.latest-btn {
+  font-weight: 700;
+  transition: 0.1s;
+}
+
+.latest-btn:hover {
+  outline: 1px solid #fff;
+  outline-offset: 3px;
+}
+
+.sale {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+}
+
+.sale__sale {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 1250px;
+}
+
+.sale__about {
+  float: left;
+}
+
+.sale__psstore-logo {
+  height: 70px;
+}
+
+.sale__img {
+  height: 450px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sale__img:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.sale__title {
+  max-width: 20ch;
+  font-size: 3rem;
+  font-weight: 300;
+  margin-top: 1px;
+}
+
+.sale__description {
+  max-width: 45ch;
+}
+
+.sale__btn {
+  background-color: #d63d00;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.sale__btn:hover {
+  background-color: #aa2f00;
+  outline: 2px solid #d63d00;
+  outline-offset: 3px;
+}
+
+/* ANIMATION */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
